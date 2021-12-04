@@ -85,8 +85,10 @@ def generate_form(lst_of_field_details):
 
 
 
-def migrate_and_register_generated_form(attrs):    
-    pillar_plus = type("PillarPlus", (models.Model,), attrs) 
+def migrate_and_register_generated_form(attrs,form_name):    
+    pillar_plus = type(form_name, (models.Model,), attrs) 
     call_command('makemigrations')
     call_command('migrate')
-
+    admin.site.register(pillar_plus)
+    reload(import_module(settings.ROOT_URLCONF))
+    clear_url_caches()
