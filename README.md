@@ -39,11 +39,13 @@
 > **Steps**:
 
       1. Upload Form CSV (ONLY .CSV FILES Supported) & Add the Form Name in Upload Form Template API (http://127.0.0.1:8000/upload-form/)
+      
+      2. I have added a csv file in this repo namely **pillarplus.csv** for testing purposes. You can use that too. 
 
-      2. After you submit the request, API will redirect you to the generated form API by fetching details of your
+      3. After you submit the request, API will redirect you to the generated form API by fetching details of your
          form fields csv (http://127.0.0.1:8000/google-form/)
 
-      3. Users can then perform create, update, delete entries in the form.
+      4. Users can then perform create, update, delete entries in the form.
 
       
 ![](screenshots/upload-form.png)
